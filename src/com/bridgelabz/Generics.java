@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-class FindMaximum<T extends Comparable> {
+class FindMaximum<T extends Comparable<T> {
     T a, b, c;
 
     FindMaximum(T a, T b, T c) {
@@ -9,7 +9,7 @@ class FindMaximum<T extends Comparable> {
         this.c = c;
     }
 
-    public static <T extends Comparable> void findMaximum(T a, T b, T c) {
+    public static <T extends Comparable<T> void findMaximum(T a, T b, T c) {
         T max = a;
         if (b.compareTo(a) > 0) {
             max = b;
