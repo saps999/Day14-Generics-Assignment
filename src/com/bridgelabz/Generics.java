@@ -1,8 +1,15 @@
 package com.bridgelabz;
 
 class FindMaximum<T extends Comparable> {
+    T a, b, c;
 
-    public void findMaximum(T a, T b, T c) {
+    FindMaximum(T a, T b, T c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public static <T extends Comparable> void findMaximum(T a, T b, T c) {
         T max = a;
         if (b.compareTo(a) > 0) {
             max = b;
@@ -12,13 +19,18 @@ class FindMaximum<T extends Comparable> {
         }
         System.out.println("Maximum number is: " + max);
     }
+
+    public void testMaximum() {
+        FindMaximum.findMaximum(a, b, c);
+    }
+
 }
+
+
 public class Generics {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Day-14 Generics Assignment");
-        FindMaximum fm =new FindMaximum();
-        fm.findMaximum(10,20,30);
-        fm.findMaximum(30.5,20.5,10.5);
-        fm.findMaximum("Apple","Peach","Banana");
+        new FindMaximum<>(10, 20, 30).testMaximum();
+        new FindMaximum<>(3.5, 5.6, 3.9).testMaximum();
+        new FindMaximum<>("Apple", "Peach", "Banana").testMaximum();
     }
 }
