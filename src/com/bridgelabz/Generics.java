@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-class FindMaximum<T extends Comparable> {
+class FindMaximum<T extends Comparable<T> {
 
     public void findMaximum(T a, T b, T c) {
         T max = a;
