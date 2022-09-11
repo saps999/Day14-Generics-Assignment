@@ -1,3 +1,5 @@
+package com.bridgelabz;
+
 class FindMaximum<T extends Comparable> {
     T a, b, c, d, e;
 
