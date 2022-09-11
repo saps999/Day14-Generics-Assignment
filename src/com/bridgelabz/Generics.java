@@ -1,9 +1,9 @@
 package com.bridgelabz;
 
-class FindMaximum {
+class FindMaximum<T extends Comparable> {
 
-    public void findMaximum(String a, String b, String c) {
-        String max = a;
+    public void findMaximum(T a, T b, T c) {
+        T max = a;
         if (b.compareTo(a) > 0) {
             max = b;
         }
@@ -17,6 +17,8 @@ public class Generics {
     public static void main(String[] args) {
         System.out.println("Welcome to the Day-14 Generics Assignment");
         FindMaximum fm =new FindMaximum();
+        fm.findMaximum(10,20,30);
+        fm.findMaximum(30.5,20.5,10.5);
         fm.findMaximum("Apple","Peach","Banana");
     }
 }
